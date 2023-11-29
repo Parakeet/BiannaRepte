@@ -1,0 +1,36 @@
+<!-- celra/templates/celra/detall_comanda.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/quasar@1.22.10/dist/quasar.min.css" rel="stylesheet" type="text/css">
+    <title>Detalls de la Comanda {{ comanda.numero_comanda }}</title>
+</head>
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@^2.0.0/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quasar@1.22.10/dist/quasar.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quasar@1.22.10/dist/lang/es.umd.min.js"></script>
+
+    <script>
+      Quasar.lang.set(Quasar.lang.es)
+      Quasar.iconSet.set(Quasar.iconSet.fontawesomeV6)
+    </script>
+
+    <h1>Detalls de la Comanda {{ comanda.numero_comanda }}</h1>
+    <p>Data de creació: {{ comanda.data_creacio }}</p>
+    <p>Data de necessitat: {{ comanda.data_necessitat }}</p>
+    <p>import_comanda: {{ comanda.import_comanda }}</p>
+    <p>Usuari: {{ comanda.usuari }}</p>
+    
+    <!-- Afegir més detalls segons les necessitats -->
+</body>
+</html>
+
+
+
+
+
+
+

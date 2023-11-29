@@ -1,0 +1,55 @@
+<!-- celra/templates/celra/detall_comanda.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detall de la Comanda</title>
+  <link href="https://cdn.jsdelivr.net/npm/quasar@1.22.10/dist/quasar.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div id="q-app">
+    <q-table
+      :rows="detallsComanda"
+      :columns="columns"
+      row-key="article"
+      :rows-per-page-options="[5, 10, 20, 50]"
+      :pagination="true"
+    />
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@^2.0.0/dist/vue.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/quasar@1.22.10/dist/quasar.umd.min.js"></script>
+  <script>
+    new Vue({
+      el: '#q-app',
+      data() {
+        return {
+          detallsComanda: [
+            { article: 'Article 1', quantitat: 5, preu_unitari: 10.50 },
+            { article: 'Article 2', quantitat: 3, preu_unitari: 8.75 },
+            // ... más detalles
+          ],
+          columns: [
+            { name: 'article', label: 'Article', align: 'left', field: 'article' },
+            { name: 'quantitat', label: 'Quantitat', align: 'center', field: 'quantitat' },
+            { name: 'preu_unitari', label: 'Preu Unitari', align: 'center', field: 'preu_unitari' },
+            // ... más columnas si es necesario
+          ],
+        };
+      },
+    });
+  </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+

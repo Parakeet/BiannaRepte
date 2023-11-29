@@ -1,0 +1,12 @@
+{% extends 'admin/base_site.html' %}
+
+{% block content %}
+  <h1>Detall de la Comanda</h1>
+  <p>Número de Comanda: {{ comanda.numero_comanda }}</p>
+  <p>Data de Creació: {{ comanda.data_creacio }}</p>
+  <p>Data de Necessitat: {{ comanda.data_necessitat }}</p>
+  <p>import_comanda: {{ comanda.import_comanda }}</p>
+  <p>Usuari: {{ comanda.usuari }}</p>
+  <!-- Altres detalls de la comanda segons necessiti -->
+{% endblock %}
+
